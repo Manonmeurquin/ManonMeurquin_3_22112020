@@ -1,0 +1,252 @@
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: 
+        url(font/Roboto-Regular-webfont.eot),
+        url(font/Roboto-Regular-webfont.svg) format('svg'),
+        url(font/Roboto-Regular-webfont.ttf) format('truetype'),
+        url(font/Roboto-Regular-webfont.woff) format('woff');
+}
+
+@font-face{
+    font-family: 'shrikhand';
+    src: url(font/Shrikhand-Regular.otf);
+}
+
+/* INDEX */ 
+
+/* header */
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    width: 11em;
+    height: 2em;
+    margin-bottom: 0.6em;
+    margin-top: 1em;
+}
+
+/* Div searchbox */
+
+.searchbox{
+    font-family: 'robotoregular';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(230, 230, 230);
+    width: 100%; 
+    height: 3em;
+    box-shadow: inset 0px 3px 5px -2px rgba(81,81,81,0.4);
+}
+
+.search{
+    font-family: 'robotoregular';
+}
+
+input{
+    border-style: none;
+    background-color: rgb(230, 230, 230);
+}
+
+::placeholder{
+    color: black;
+}
+
+/* Div explore */
+
+h1{
+    font-size: 1.6em;
+    padding: 0 2em;
+    margin: 0;
+}
+
+input{
+    border-style: none;
+    background-color: rgb(230, 230, 230);
+}
+
+.explore{
+    text-align: center;
+    background-color: rgb(245, 245, 245);
+    padding-bottom: 4em;
+}
+
+.reservez{
+    padding-top: 1.5em;
+}
+
+.decouvrez{
+    color: rgb(122, 121, 121) ;
+    font-weight: 100;
+}
+
+.button{
+    border-radius: 2em;
+    color:rgb(245, 245, 245);
+    border: none;
+    padding: 0.8em 1.5em;
+    background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+    box-shadow: 0px 9px 19px -1px rgb(151, 150, 150);
+    font-size: 1.1em;
+}
+
+/* Fonctionnement */ 
+
+.fonctionnement{
+    display: flex;
+    flex-direction: column;
+    padding-top: 1em;
+}
+
+.all-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    padding: 0.3em ;
+    display: flex;
+    box-shadow: 0px 10px 22px -6px #adadad;
+    border-radius: 1em;
+    margin-bottom: 2em;
+    width: 85%;
+    background-color: rgb(240, 239, 239);
+}
+
+.pastille{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9356DC;
+    border-radius: 50%;
+    width: 1.5em;
+    height: 1.5em;
+    color: white;
+    margin-left: -1em;
+}
+
+.fas.fa-mobile-alt, .fas.fa-list-ul, .fas.fa-store{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 1em;
+    padding-left: 1em;
+    color: rgb(131, 131, 131);
+    font-size: 1.3em;
+
+}
+
+/* Restaurants */ 
+
+.restaurant{
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(245, 245, 245);
+    padding-top: 2em;
+}
+
+.card-restaurant{
+    display: flex;
+    flex-direction: column;
+    border-radius: 1em;
+    margin: 1em 1em;
+    height: 15em;
+    background-color: white;
+    box-shadow: 0px 10px 22px -6px #adadad;
+}
+
+.restaurant-img-1{
+    background-image: url(images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+}
+
+.restaurant-img-2{
+    background-image: url(images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+}
+
+.restaurant-img-3{
+    background-image: url(images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+}
+
+.restaurant-img-4{
+    background-image: url(images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+}
+
+.img-restaurant{
+    width: 100%;
+    height: 30em;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+
+h3{
+    margin: 0;
+}
+
+.place{
+    margin: 0;
+}
+
+/* Footer */
+
+.logo-footer{
+    width: 6em;
+}
+
+.title{
+    font-family: 'shrikhand';
+    font-size: 1.2em;
+    padding: 1em;
+}
+
+footer{
+    background-color: rgb(59, 59, 59);
+    color: white;
+    padding-bottom: 3em;
+    padding-top: 0.5em;
+}
+ul{
+    list-style-type: none;
+    padding-left: 0.5em;
+}
+
+li{
+    margin: 0.7em;
+}
+
+.fa-utensils{
+    padding-right: 1em;
+}
+
+.fa-hands-helping{
+    padding-right: 1em;
+    font-size: 0.8em;
+}
+
+/* Général */
+
+p, h1, h2, h3{
+    font-family: 'Roboto-Regular';
+}
+
+.img{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h2{
+    padding-left: 0.8em;
+}
+
+/* MENU */
+
+.img-menu{
+    width: 20em;
+    height: 15em;
+}
