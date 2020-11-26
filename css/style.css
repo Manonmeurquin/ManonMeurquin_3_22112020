@@ -9,6 +9,7 @@
   src: url(font/Shrikhand-Regular.otf);
 }
 
+/* Variables */
 /* INDEX */
 /* header */
 header {
@@ -36,7 +37,7 @@ header {
 
 /* Div searchbox */
 .searchbox {
-  font-family: 'robotoregular';
+  font-family: "Roboto-Regular";
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,10 +52,6 @@ header {
   height: 3em;
   -webkit-box-shadow: inset 0px 3px 5px -2px rgba(81, 81, 81, 0.4);
           box-shadow: inset 0px 3px 5px -2px rgba(81, 81, 81, 0.4);
-}
-
-.search {
-  font-family: 'robotoregular';
 }
 
 input {
@@ -117,6 +114,12 @@ input {
   font-size: 1.1em;
 }
 
+.button:hover {
+  background: -webkit-gradient(linear, left top, right bottom, from(#fdaae6), to(#ac8bd3));
+  background: linear-gradient(to bottom right, #fdaae6, #ac8bd3);
+  color: white;
+}
+
 /* Fonctionnement */
 .fonctionnement {
   display: -webkit-box;
@@ -156,6 +159,10 @@ input {
   margin-bottom: 2em;
   width: 85%;
   background-color: #f0efef;
+}
+
+.card:hover {
+  background-color: #e9def7;
 }
 
 .pastille {
@@ -202,6 +209,7 @@ input {
           align-items: center;
   background-color: whitesmoke;
   padding-top: 2em;
+  padding-bottom: 3em;
 }
 
 .card-restaurant {
@@ -245,10 +253,26 @@ input {
 
 h3 {
   margin: 0;
+  color: black;
+  padding-left: 1em;
+  padding-top: 1em;
+  font-weight: bold;
 }
 
 .place {
   margin: 0;
+  color: black;
+  padding-left: 1em;
+  padding-bottom: 1em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.fa-heart {
+  color: black;
+  font-size: 1.5em;
 }
 
 /* Footer */
@@ -276,6 +300,7 @@ ul {
 
 li {
   margin: 0.7em;
+  font-family: "Roboto-Regular";
 }
 
 .fa-utensils {
@@ -287,9 +312,13 @@ li {
   font-size: 0.8em;
 }
 
+.mail {
+  color: white;
+}
+
 /* Général */
 p, h1, h2, h3 {
-  font-family: 'Roboto-Regular';
+  font-family: "Roboto-Regular";
 }
 
 .img {
