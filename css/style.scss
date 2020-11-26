@@ -162,6 +162,7 @@ input{
 }
 
 .card-restaurant{
+    position: relative;
     display: flex;
     flex-direction: column;
     border-radius: 1em;
@@ -213,13 +214,16 @@ a{
     text-decoration: none;
 }
 
-.fa-heart{
+.empty-heart{
     color: black;
     font-size: 1.5em;
+
 }
 
-.transition-color{
-
+.favoris{
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 /* Footer */
