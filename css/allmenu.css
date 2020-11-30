@@ -1,0 +1,58 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url(font/Roboto-Regular-webfont.eot), url(font/Roboto-Regular-webfont.svg) format("svg"), url(font/Roboto-Regular-webfont.ttf) format("truetype"), url(font/Roboto-Regular-webfont.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'shrikhand';
+  src: url(font/Shrikhand-Regular.otf);
+}
+
+/* header */
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+h1 {
+  font-family: 'shrikhand';
+  text-align: center;
+  margin: 0;
+}
+
+.fa-arrow-left {
+  color: black;
+  font-size: 1.2em;
+}
+
+/* Menu */
+.title-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 1em;
+}
+
+/* footer */
+.title-footer {
+  font-family: 'shrikhand';
+  font-size: 1.2em;
+  padding: 1em;
+}
+
+/* Général */
+p, h2, h3 {
+  font-family: 'Roboto-Regular';
+}
+/*# sourceMappingURL=allmenu.css.map */

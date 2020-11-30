@@ -127,11 +127,13 @@ input{
     align-items: center;
 }
 
+.card:hover .icone{
+    background-color: #e9def7;
+    color: #9356DC;
+}
+
 .card:hover{
     background-color: #e9def7;
-    .icone:hover{
-        color: #9356DC;
-    }
 }
 
 .pastille{
@@ -167,7 +169,6 @@ input{
 }
 
 .card-restaurant{
-    position: relative;
     display: flex;
     flex-direction: column;
     border-radius: 1em;
@@ -180,11 +181,11 @@ input{
 .new{
     background-color: #99E2D0;
     color: #269c7f;
-    position: absolute;
-    top: 0;
-    right: 1em;
     padding: 0.3em 0.5em;
     border-radius: 0.2em;
+    width: 5em;
+    text-align: center;
+    margin-left: 65%;
 }
 
 .restaurant-img-1{
@@ -229,13 +230,45 @@ a{
     text-decoration: none;
 }
 
-.empty-heart{
+.bottom-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1em;
+}
+
+.like{
     position: absolute;
-    right: 1em;
-    bottom: 0.8em;
-    font-size: 2em;
+    right:3em;
+}
+
+.empty-heart{
+    position: relative;
     z-index: 1;
+    -webkit-text-stroke: 2px white;
+    font-size: 2em;
     color: black;
+}
+
+.full-heart{
+    position: absolute;
+    z-index:-1;
+    left:0;
+    top:0;
+    background: linear-gradient(#FF79DA, #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity:0;
+    font-size: 1em;
+    transform: scale(0);
+    transition: .5s;
+}
+
+.empty-heart:hover .full-heart{
+    opacity:1;
+    transform: scale(1);
+    
 }
 
 .empty-heart:hover{
@@ -243,33 +276,11 @@ a{
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-
-.full-heart{
-    position: absolute;
-    right: 1em;
-    bottom: 0.8em;
-    font-size: 2em;
-    background: linear-gradient(#FF79DA, #9356DC);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    opacity: 0;
-}
-
-.full-heart:hover{
-    background: linear-gradient(#FF79DA, #9356DC);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    z-index: 1;
-}
+    -webkit-text-stroke: 0px white;
+    
+  }
 
 /* Footer */
-
-.logo-footer{
-    width: 6em;
-}
 
 .title{
     font-family: 'shrikhand';
