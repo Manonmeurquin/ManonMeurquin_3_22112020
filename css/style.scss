@@ -268,7 +268,6 @@ a{
 .empty-heart:hover .full-heart{
     opacity:1;
     transform: scale(1);
-    
 }
 
 .empty-heart:hover{
@@ -277,15 +276,13 @@ a{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 0px white;
-    
   }
 
-/* Footer */
+/* Footer */ 
 
-.title{
+.title-footer{
     font-family: 'shrikhand';
     font-size: 1.2em;
-    padding: 1em;
 }
 
 footer{
@@ -297,11 +294,11 @@ footer{
 
 ul{
     list-style-type: none;
-    padding-left: 0.5em;
+    padding-left: 0;
+    margin-left: 1em;
 }
 
 li{
-    margin: 0.7em;
     font-family: $font-stack;
 }
 

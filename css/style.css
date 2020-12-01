@@ -350,10 +350,9 @@ a {
 }
 
 /* Footer */
-.title {
+.title-footer {
   font-family: 'shrikhand';
   font-size: 1.2em;
-  padding: 1em;
 }
 
 footer {
@@ -365,11 +364,11 @@ footer {
 
 ul {
   list-style-type: none;
-  padding-left: 0.5em;
+  padding-left: 0;
+  margin-left: 1em;
 }
 
 li {
-  margin: 0.7em;
   font-family: "Roboto-Regular";
 }
 
