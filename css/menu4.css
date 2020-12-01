@@ -48,6 +48,7 @@ header {
   background-color: whitesmoke;
   border-top-left-radius: 3em;
   border-top-right-radius: 3em;
+  padding: 0 1em;
 }
 
 .title-restaurant {
@@ -87,25 +88,38 @@ header {
   margin-bottom: -4em;
 }
 
-.bckgrd {
+.contenu {
+  text-overflow: ellipsis;
+}
+
+.contenu h3 {
+  height: 40px;
+  text-overflow: ellipsis;
+}
+
+.box-left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 100%;
+  padding: 0.5em;
+  padding-left: 1em;
 }
 
-.animation .fa-check-circle {
-  -webkit-animation: animhover 1s linear 1 forwards;
-          animation: animhover 1s linear 1 forwards;
+.box:hover .fa-check-circle {
+  -webkit-animation: animhover 0.5s linear 1 forwards;
+          animation: animhover 0.5s linear 1 forwards;
 }
 
-.animation .anim-hover {
-  opacity: 1;
+.box:hover .price {
+  -webkit-animation: slide 0.5s linear 1 forwards;
+          animation: slide 0.5s linear 1 forwards;
 }
 
-.animation {
+.box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -116,9 +130,51 @@ header {
   background-color: white;
   -webkit-box-shadow: 5px 8px 12px -2px #d1d1d1;
           box-shadow: 5px 8px 12px -2px #d1d1d1;
-  -webkit-animation: fade 1s linar 1 forwards;
-          animation: fade 1s linar 1 forwards;
-  border-radius: 2em;
+  border-radius: 1em;
+  margin: 1em 0;
+  overflow: hidden;
+  opacity: 0;
+  animation: slide-fade 1s linear 1 forwards reverse;
+}
+
+.box-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 7.5em;
+}
+
+.price {
+  margin-left: 5em;
+  margin-right: 1em;
+  padding-bottom: 0.5em;
+}
+
+@-webkit-keyframes slide-fade {
+  0% {
+    opacity: 1;
+    margin-top: 0;
+  }
+  100% {
+    opacity: 0;
+    margin-top: 1em;
+  }
+}
+
+@keyframes slide-fade {
+  0% {
+    opacity: 1;
+    margin-top: 0;
+  }
+  100% {
+    opacity: 0;
+    margin-top: 1em;
+  }
 }
 
 @-webkit-keyframes animhover {
@@ -159,33 +215,21 @@ header {
   }
 }
 
-@-webkit-keyframes fade {
+@-webkit-keyframes slide {
   0% {
-    opacity: 0;
-  }
-  33% {
-    opacity: 0.33;
-  }
-  66% {
-    opacity: 0.66;
+    margin-left: 5em;
   }
   100% {
-    opacity: 1;
+    margin-left: 0em;
   }
 }
 
-@keyframes fade {
+@keyframes slide {
   0% {
-    opacity: 0;
-  }
-  33% {
-    opacity: 0.33;
-  }
-  66% {
-    opacity: 0.66;
+    margin-left: 5em;
   }
   100% {
-    opacity: 1;
+    margin-left: 0em;
   }
 }
 
@@ -204,7 +248,8 @@ header {
   border-top-right-radius: 1em;
   border-bottom-right-radius: 1em;
   width: 5em;
-  /* opacity: 0; */
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
 }
 
 .fa-check-circle {
@@ -228,6 +273,51 @@ header {
   width: 100%;
 }
 
+.entree1 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.entree2 {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.entree3 {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.plat1 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.plat2 {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
+.plat3 {
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+}
+
+.dessert1 {
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+
+.dessert2 {
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+
+.dessert3 {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
 .btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -239,8 +329,8 @@ header {
 
 .button {
   border-radius: 2em;
-  color: whitesmoke;
   border: none;
+  color: #f7f7f7;
   padding: 0.8em 2.5em;
   background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
@@ -249,18 +339,23 @@ header {
   font-size: 1.1em;
   margin-top: 2em;
   margin-bottom: 3em;
+  -webkit-transition: opacity 1s, -webkit-box-shadow 1s;
+  transition: opacity 1s, -webkit-box-shadow 1s;
+  transition: box-shadow 1s, opacity 1s;
+  transition: box-shadow 1s, opacity 1s, -webkit-box-shadow 1s;
 }
 
 .button:hover {
-  background: -webkit-gradient(linear, left top, right bottom, from(#fdaae6), to(#ac8bd3));
-  background: linear-gradient(to bottom right, #fdaae6, #ac8bd3);
-  color: white;
+  opacity: 0.7;
+  -webkit-box-shadow: 0px 9px 19px -1px #4e4e4e;
+          box-shadow: 0px 9px 19px -1px #4e4e4e;
 }
 
 /* Footer */
 .title-footer {
   font-family: 'shrikhand';
   font-size: 1.2em;
+  font-weight: lighter;
 }
 
 footer {
@@ -294,7 +389,7 @@ li {
 }
 
 /* Général */
-p, h3, span {
+p, h3, .price {
   font-family: 'Roboto-Regular';
 }
 

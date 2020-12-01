@@ -104,20 +104,26 @@ input {
 
 .button {
   border-radius: 2em;
-  color: whitesmoke;
   border: none;
-  padding: 0.8em 1.5em;
+  color: #f7f7f7;
+  padding: 0.8em 1em;
   background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   -webkit-box-shadow: 0px 9px 19px -1px #979696;
           box-shadow: 0px 9px 19px -1px #979696;
   font-size: 1.1em;
+  margin-top: 2em;
+  margin-bottom: 3em;
+  -webkit-transition: opacity 1s, -webkit-box-shadow 1s;
+  transition: opacity 1s, -webkit-box-shadow 1s;
+  transition: box-shadow 1s, opacity 1s;
+  transition: box-shadow 1s, opacity 1s, -webkit-box-shadow 1s;
 }
 
 .button:hover {
-  background: -webkit-gradient(linear, left top, right bottom, from(#fdaae6), to(#ac8bd3));
-  background: linear-gradient(to bottom right, #fdaae6, #ac8bd3);
-  color: white;
+  opacity: 0.7;
+  -webkit-box-shadow: 0px 9px 19px -1px #4e4e4e;
+          box-shadow: 0px 9px 19px -1px #4e4e4e;
 }
 
 /* Fonctionnement */
@@ -169,10 +175,14 @@ input {
 .card:hover .icone {
   background-color: #e9def7;
   color: #9356DC;
+  -webkit-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
 }
 
 .card:hover {
   background-color: #e9def7;
+  -webkit-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
 }
 
 .pastille {
@@ -353,6 +363,7 @@ a {
 .title-footer {
   font-family: 'shrikhand';
   font-size: 1.2em;
+  font-weight: lighter;
 }
 
 footer {

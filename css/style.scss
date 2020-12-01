@@ -86,17 +86,20 @@ input{
 
 .button{
     border-radius: 2em;
-    color:rgb(245, 245, 245);
     border: none;
-    padding: 0.8em 1.5em;
+    color: #f7f7f7;
+    padding: 0.8em 1em;
     background: linear-gradient(to bottom right, #FF79DA, #9356DC);
     box-shadow: 0px 9px 19px -1px rgb(151, 150, 150);
     font-size: 1.1em;
+    margin-top: 2em;
+    margin-bottom: 3em;
+    transition: box-shadow 1s, opacity 1s;
 }
 
 .button:hover{
-    background: linear-gradient(to bottom right, #fdaae6, #ac8bd3);
-    color: white;
+    opacity: 0.7;
+    box-shadow: 0px 9px 19px -1px rgb(78, 78, 78);
 }
 
 /* Fonctionnement */ 
@@ -130,10 +133,12 @@ input{
 .card:hover .icone{
     background-color: #e9def7;
     color: #9356DC;
+    transition: all 0.7s ease-out;
 }
 
 .card:hover{
     background-color: #e9def7;
+    transition: all 0.7s ease-out;
 }
 
 .pastille{
@@ -283,6 +288,7 @@ a{
 .title-footer{
     font-family: 'shrikhand';
     font-size: 1.2em;
+    font-weight: lighter;
 }
 
 footer{
