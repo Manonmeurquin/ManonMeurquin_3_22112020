@@ -94,7 +94,6 @@ header {
 
 .contenu h3 {
   height: 40px;
-  text-overflow: ellipsis;
 }
 
 .box-left {
@@ -137,6 +136,13 @@ header {
   animation: slide-fade 1s linear 1 forwards reverse;
 }
 
+.back {
+  -webkit-animation: animhoverback 0.5 linear 1 forwards;
+          animation: animhoverback 0.5 linear 1 forwards;
+  -webkit-animation: slideback 0.5 linear 1 forwards;
+          animation: slideback 0.5 linear 1 forwards;
+}
+
 .box-right {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -177,18 +183,28 @@ header {
   }
 }
 
+@-webkit-keyframes slideback {
+  0% {
+    margin-left: 0em;
+  }
+  100% {
+    margin-left: 5em;
+  }
+}
+
+@keyframes slideback {
+  0% {
+    margin-left: 0em;
+  }
+  100% {
+    margin-left: 5em;
+  }
+}
+
 @-webkit-keyframes animhover {
   0% {
     -webkit-transform: rotate(0turn);
             transform: rotate(0turn);
-  }
-  33% {
-    -webkit-transform: rotate(0.5turn);
-            transform: rotate(0.5turn);
-  }
-  66% {
-    -webkit-transform: rotate(0.75turn);
-            transform: rotate(0.75turn);
   }
   100% {
     -webkit-transform: rotate(1turn);
@@ -201,13 +217,27 @@ header {
     -webkit-transform: rotate(0turn);
             transform: rotate(0turn);
   }
-  33% {
-    -webkit-transform: rotate(0.5turn);
-            transform: rotate(0.5turn);
+  100% {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
   }
-  66% {
-    -webkit-transform: rotate(0.75turn);
-            transform: rotate(0.75turn);
+}
+
+@-webkit-keyframes animhoverback {
+  0% {
+    -webkit-transform: rotate(0turn);
+            transform: rotate(0turn);
+  }
+  100% {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+
+@keyframes animhoverback {
+  0% {
+    -webkit-transform: rotate(0turn);
+            transform: rotate(0turn);
   }
   100% {
     -webkit-transform: rotate(1turn);
@@ -271,6 +301,7 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
+  text-overflow: ellipsis;
 }
 
 .entree1 {

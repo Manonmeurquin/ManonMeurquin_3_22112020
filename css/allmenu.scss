@@ -92,7 +92,6 @@ header{
 
     h3{
     height: 40px;
-    text-overflow: ellipsis;
 }
 }
 
@@ -109,7 +108,7 @@ header{
 }
 
 .box:hover .price{
-    animation: slide 0.5s linear 1 forwards;
+  animation: slide 0.5s linear 1 forwards;
 }
 
 .box{
@@ -125,6 +124,11 @@ header{
     animation: slide-fade 1s linear 1 forwards reverse;
 }
 
+.back {
+    animation: animhoverback 0.5 linear 1 forwards;
+    animation: slideback 0.5 linear 1 forwards;
+    }   
+
 .box-right{
     display: flex;
     align-self: stretch;
@@ -138,6 +142,7 @@ header{
     padding-bottom: 0.5em;
 }
 
+
 @keyframes slide-fade{
     0%{
         opacity: 1;
@@ -149,15 +154,27 @@ header{
     }
 }
 
+@keyframes slideback{
+    0%{
+        margin-left: 0em;
+    }    
+    100%{
+        margin-left: 5em;
+    }
+}
+
 @keyframes animhover{
     0%{
         transform: rotate(0turn)
     }
-    33%{
-        transform: rotate(0.5turn);
+    100%{
+        transform: rotate(1turn);
     }
-    66%{
-        transform: rotate(0.75turn);
+}
+
+@keyframes animhoverback{
+    0%{
+        transform: rotate(0turn)
     }
     100%{
         transform: rotate(1turn);
@@ -200,6 +217,7 @@ header{
     display: flex;
     justify-content: space-between;
     width: 100%;
+    text-overflow: ellipsis;
 }
 
 .entree1{

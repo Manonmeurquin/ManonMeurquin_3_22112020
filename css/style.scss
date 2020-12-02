@@ -16,7 +16,7 @@
 
 $font-stack: 'Roboto-Regular'; 
 
-/* INDEX */ 
+/* INDEX */
 
 /* header */
 
@@ -128,17 +128,18 @@ input{
     display: flex;
     border: none;
     align-items: center;
+    transition: all 0.7s linear;
 }
 
 .card:hover .icone{
     background-color: #e9def7;
     color: #9356DC;
-    transition: all 0.7s ease-out;
+    transition: all 0.7s linear;
 }
 
 .card:hover{
     background-color: #e9def7;
-    transition: all 0.7s ease-out;
+    transition: all 0.7s linear;
 }
 
 .pastille{
@@ -161,6 +162,10 @@ input{
     padding-left: 1em;
     color: rgb(131, 131, 131);
     font-size: 1.3em;
+}
+
+.text-fonc{
+    font-size: 1.5em;
 }
 
 /* Restaurants */ 
@@ -219,16 +224,13 @@ input{
 h3{
     margin: 0;
     color: black;
-    padding-left: 1em;
-    padding-top: 1em;
     font-weight: bold;
 }
 
 .place{
     margin: 0;
     color: black;
-    padding-left: 1em;
-    padding-bottom: 1em;
+    padding-top: 0.5em;
 }
 
 a{
@@ -239,7 +241,7 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-right: 1em;
+    padding: 1em;
 }
 
 .like{
