@@ -11,6 +11,163 @@
 
 /* Variables */
 /* INDEX */
+/* Spin loader */
+.container-spinner {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.filter {
+  background-color: #dbd9d9;
+  opacity: 0.6;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-animation: visibility-filter 3s linear 1 forwards;
+          animation: visibility-filter 3s linear 1 forwards;
+}
+
+.spinner {
+  -webkit-animation: loader 1s linear 3 forwards;
+          animation: loader 1s linear 3 forwards;
+  z-index: 3;
+  position: fixed;
+}
+
+.fa-spinner {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0px white;
+  font-size: 3em;
+  -webkit-animation: visibility-spinner 3s linear 1 forwards;
+          animation: visibility-spinner 3s linear 1 forwards;
+}
+
+@-webkit-keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+  }
+  50% {
+    -webkit-transform: rotate(180deg) scale(1.2);
+            transform: rotate(180deg) scale(1.2);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) scale(1);
+            transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+  }
+  50% {
+    -webkit-transform: rotate(180deg) scale(1.2);
+            transform: rotate(180deg) scale(1.2);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) scale(1);
+            transform: rotate(360deg) scale(1);
+  }
+}
+
+@-webkit-keyframes visibility-filter {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0.6;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0.6;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes visibility-filter {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0.6;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0.6;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes visibility-spinner {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes visibility-spinner {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
 /* header */
 header {
   display: -webkit-box;

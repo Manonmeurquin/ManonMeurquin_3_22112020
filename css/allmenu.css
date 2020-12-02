@@ -136,13 +136,6 @@ header {
   animation: slide-fade 1s linear 1 forwards reverse;
 }
 
-.back {
-  -webkit-animation: animhoverback 0.5 linear 1 forwards;
-          animation: animhoverback 0.5 linear 1 forwards;
-  -webkit-animation: slideback 0.5 linear 1 forwards;
-          animation: slideback 0.5 linear 1 forwards;
-}
-
 .box-right {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -183,24 +176,6 @@ header {
   }
 }
 
-@-webkit-keyframes slideback {
-  0% {
-    margin-left: 0em;
-  }
-  100% {
-    margin-left: 5em;
-  }
-}
-
-@keyframes slideback {
-  0% {
-    margin-left: 0em;
-  }
-  100% {
-    margin-left: 5em;
-  }
-}
-
 @-webkit-keyframes animhover {
   0% {
     -webkit-transform: rotate(0turn);
@@ -213,28 +188,6 @@ header {
 }
 
 @keyframes animhover {
-  0% {
-    -webkit-transform: rotate(0turn);
-            transform: rotate(0turn);
-  }
-  100% {
-    -webkit-transform: rotate(1turn);
-            transform: rotate(1turn);
-  }
-}
-
-@-webkit-keyframes animhoverback {
-  0% {
-    -webkit-transform: rotate(0turn);
-            transform: rotate(0turn);
-  }
-  100% {
-    -webkit-transform: rotate(1turn);
-            transform: rotate(1turn);
-  }
-}
-
-@keyframes animhoverback {
   0% {
     -webkit-transform: rotate(0turn);
             transform: rotate(0turn);

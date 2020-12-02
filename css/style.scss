@@ -18,6 +18,100 @@ $font-stack: 'Roboto-Regular';
 
 /* INDEX */
 
+/* Spin loader */
+
+.container-spinner{
+    position:fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.filter{
+    background-color: rgb(219, 217, 217);
+    opacity: 0.6;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    animation: visibility-filter 3s linear 1 forwards;
+}
+
+.spinner{
+    animation: loader 1s linear 3 forwards;
+    z-index: 3;
+    position:fixed;
+    
+}
+
+
+.fa-spinner{
+    background: linear-gradient(#FF79DA, #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0px white;
+    font-size: 3em;
+    animation: visibility-spinner 3s linear 1 forwards;
+}
+
+@keyframes loader{
+    0%{
+        transform: rotate(0deg) scale(1);
+    }
+    50%{
+        transform: rotate(180deg) scale(1.2);
+    }
+    100%{
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+@keyframes visibility-filter{
+    0%{
+        visibility: hidden;
+        opacity: 0;
+    }
+    1%{
+        visibility: visible;
+        opacity: 0.6;
+    }
+    99%{
+        visibility: visible;
+        opacity: 0.6;
+    }
+    100%{
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+@keyframes visibility-spinner{
+    0%{
+        visibility: hidden;
+        opacity: 0;
+    }
+    1%{
+        visibility: visible;
+        opacity: 1;
+    }
+    99%{
+        visibility: visible;
+        opacity: 1;
+    }
+    100%{
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
 /* header */
 
 header{

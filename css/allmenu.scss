@@ -122,12 +122,7 @@ header{
     overflow: hidden;
     opacity: 0;
     animation: slide-fade 1s linear 1 forwards reverse;
-}
-
-.back {
-    animation: animhoverback 0.5 linear 1 forwards;
-    animation: slideback 0.5 linear 1 forwards;
-    }   
+} 
 
 .box-right{
     display: flex;
@@ -154,25 +149,7 @@ header{
     }
 }
 
-@keyframes slideback{
-    0%{
-        margin-left: 0em;
-    }    
-    100%{
-        margin-left: 5em;
-    }
-}
-
 @keyframes animhover{
-    0%{
-        transform: rotate(0turn)
-    }
-    100%{
-        transform: rotate(1turn);
-    }
-}
-
-@keyframes animhoverback{
     0%{
         transform: rotate(0turn)
     }
