@@ -20,12 +20,16 @@ $font-stack: 'Roboto-Regular';
 
 /* Spin loader */
 
+body{
+    z-index: 1;
+}
+
 .container-spinner{
     position:fixed;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
+    z-index: 3;
     top: 0;
     right: 0;
     bottom: 0;
@@ -35,7 +39,7 @@ $font-stack: 'Roboto-Regular';
 .filter{
     background-color: rgb(219, 217, 217);
     opacity: 0.6;
-    z-index: 2;
+    z-index: 4;
     position: fixed;
     top: 0;
     right: 0;
@@ -46,9 +50,8 @@ $font-stack: 'Roboto-Regular';
 
 .spinner{
     animation: loader 1s linear 3 forwards;
-    z-index: 3;
+    z-index: 5;
     position:fixed;
-    
 }
 
 
