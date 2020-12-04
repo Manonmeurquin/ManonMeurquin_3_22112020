@@ -21,6 +21,35 @@
     src: url(font/Shrikhand-Regular.otf);
 }
 
+@keyframes slide-fade{
+    0%{
+        opacity: 1;
+        margin-top: 0;
+    }
+    100%{
+        opacity: 0;
+        margin-top: 1em;
+    }
+}
+
+@keyframes animhover{
+    0%{
+        transform: rotate(0turn)
+    }
+    100%{
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes slide{
+    0%{
+        margin-left: 5em;
+    }    
+    100%{
+        margin-left: 0em;
+    }
+}
+
 $font-stack: 'Roboto-Regular'; 
 
 /* header */ 
@@ -60,6 +89,7 @@ header{
     font-family: 'shrikhand';
     font-size: 1.7em;
     font-weight: lighter;
+    margin: 0;
 }
 
 .title-menu{
@@ -72,7 +102,6 @@ header{
 
 .empty-heart{
     font-size: 1.5em;
-    padding-right: 1em;
 }
 
 .img{
@@ -87,12 +116,11 @@ header{
     margin-bottom: -4em;
 }
 
-.contenu{
-    text-overflow: ellipsis;
-
-    h3{
-    height: 40px;
-}
+.trait{
+    width: 2.5em;
+    height: 0.5em;
+    border-top: solid 3px #99E2D0;
+    margin-left: 1em;
 }
 
 .box-left{
@@ -101,6 +129,13 @@ header{
     width: 100%;
     padding: 0.5em;
     padding-left: 1em;
+}
+
+.box-right{
+    display: flex;
+    align-self: stretch;
+    align-items: flex-end;
+    margin-left: -4em;
 }
 
 .box:hover .fa-check-circle{
@@ -124,47 +159,10 @@ header{
     animation: slide-fade 1s linear 1 forwards reverse;
 } 
 
-.box-right{
-    display: flex;
-    align-self: stretch;
-    align-items: flex-end;
-    width: 7.5em;
-}
-
 .price{
     margin-left: 5em;
     margin-right: 1em;
     padding-bottom: 0.5em;
-}
-
-
-@keyframes slide-fade{
-    0%{
-        opacity: 1;
-        margin-top: 0;
-    }
-    100%{
-        opacity: 0;
-        margin-top: 1em;
-    }
-}
-
-@keyframes animhover{
-    0%{
-        transform: rotate(0turn)
-    }
-    100%{
-        transform: rotate(1turn);
-    }
-}
-
-@keyframes slide{
-    0%{
-        margin-left: 5em;
-    }    
-    100%{
-        margin-left: 0em;
-    }
 }
 
 .anim-hover{
@@ -183,18 +181,16 @@ header{
     font-size: 1.6em;
 }
 
-.trait{
-    width: 2.5em;
-    height: 0.5em;
-    border-top: solid 3px #99E2D0;
-    margin-left: 1em;
+h3{
+    margin: 0;
+    padding-bottom: 0.2em;
 }
 
-.text{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+.contenu p, h3{
     text-overflow: ellipsis;
+    overflow: hidden; 
+    white-space: nowrap;
+    max-width: 250px;
 }
 
 .entree1{
@@ -299,11 +295,6 @@ h2{
     margin-left: 1em;
     margin-top: 1em;
     margin-bottom: 0.3em;
-}
-
-h3{
-    margin: 0;
-    padding-bottom: 0.2em;
 }
 
 p{

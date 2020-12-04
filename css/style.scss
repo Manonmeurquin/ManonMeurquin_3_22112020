@@ -20,26 +20,34 @@ $font-stack: 'Roboto-Regular';
 
 /* Spin loader */
 
-body{
-    z-index: 1;
+@keyframes disapear {
+    0%{
+        transform: scale(1);
+    }
+    99%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0);
+    }
 }
 
 .container-spinner{
-    position:fixed;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 3;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    position: fixed;
+    z-index: 4;
+    animation: disapear 3s linear 1 forwards;
 }
 
 .filter{
     background-color: rgb(219, 217, 217);
     opacity: 0.6;
-    z-index: 4;
     position: fixed;
     top: 0;
     right: 0;
@@ -50,8 +58,6 @@ body{
 
 .spinner{
     animation: loader 1s linear 3 forwards;
-    z-index: 5;
-    position:fixed;
 }
 
 
@@ -79,8 +85,7 @@ body{
 
 @keyframes visibility-filter{
     0%{
-        visibility: hidden;
-        opacity: 0;
+        opacity: 0;    
     }
     1%{
         visibility: visible;
@@ -226,6 +231,7 @@ input{
     border: none;
     align-items: center;
     transition: all 0.7s linear;
+    font-size: 1em;
 }
 
 .card:hover .icone{
@@ -259,10 +265,6 @@ input{
     padding-left: 1em;
     color: rgb(131, 131, 131);
     font-size: 1.3em;
-}
-
-.text-fonc{
-    font-size: 1.5em;
 }
 
 /* Restaurants */ 
@@ -348,7 +350,7 @@ a{
 
 .empty-heart{
     position: relative;
-    z-index: 1;
+    z-index: 2;
     -webkit-text-stroke: 2px white;
     font-size: 2em;
     color: black;
@@ -356,7 +358,7 @@ a{
 
 .full-heart{
     position: absolute;
-    z-index:-1;
+    z-index:3;
     left:0;
     top:0;
     background: linear-gradient(#FF79DA, #9356DC);
@@ -388,6 +390,7 @@ a{
     font-family: 'shrikhand';
     font-size: 1.2em;
     font-weight: lighter;
+    padding-left: 1em;
 }
 
 footer{
@@ -430,10 +433,6 @@ p, h1, h2, h3{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
-
-h2{
-    padding-left: 0.8em;
 }
 
 /* MENU */
