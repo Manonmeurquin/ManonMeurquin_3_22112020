@@ -194,7 +194,7 @@
   }
 }
 
-/* header */
+/* HEADER */
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -348,27 +348,31 @@ input {
   margin-bottom: 2em;
   width: 85%;
   background-color: #f0efef;
-  display: flex;
   border: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: all 0.7s linear;
-  transition: all 0.7s linear;
   font-size: 1em;
 }
 
-.card:hover .icone {
+.card-color {
+  padding: 0.3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 0px 10px 22px -6px #adadad;
+          box-shadow: 0px 10px 22px -6px #adadad;
+  border-radius: 1em;
+  margin-bottom: 2em;
+  width: 85%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #e9def7;
-  color: #9356DC;
-  -webkit-transition: all 0.7s linear;
-  transition: all 0.7s linear;
 }
 
-.card:hover {
-  background-color: #e9def7;
-  -webkit-transition: all 0.7s linear;
-  transition: all 0.7s linear;
+.card-color .icone {
+  color: #9356DC;
 }
 
 .pastille {
@@ -595,5 +599,44 @@ p, h1, h2, h3 {
 .img-menu {
   width: 20em;
   height: 15em;
+}
+
+/* MEDIA QUERIES*/
+@media all and (min-width: 1000px) {
+  .fonctionnement {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .all-card {
+    width: 40em;
+  }
+  .restaurant {
+    margin: 0 5em;
+  }
+  .like {
+    margin-right: 5em;
+  }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media all and (min-width: 1700px) {
+  .restaurant {
+    margin: 0 17em;
+  }
+  .like {
+    margin-right: 17em;
+  }
 }
 /*# sourceMappingURL=style.css.map */

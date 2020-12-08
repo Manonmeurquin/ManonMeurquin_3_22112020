@@ -60,19 +60,37 @@
 
 @-webkit-keyframes slide {
   0% {
-    margin-left: 5em;
+    width: 0;
   }
   100% {
-    margin-left: 0em;
+    width: 120px;
   }
 }
 
 @keyframes slide {
   0% {
-    margin-left: 5em;
+    width: 0;
   }
   100% {
-    margin-left: 0em;
+    width: 120px;
+  }
+}
+
+@-webkit-keyframes reduce-width {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: calc(100% - 120px);
+  }
+}
+
+@keyframes reduce-width {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: calc(100% - 120px);
   }
 }
 
@@ -135,7 +153,44 @@ header {
 }
 
 .empty-heart {
-  font-size: 1.5em;
+  position: relative;
+  z-index: 2;
+  -webkit-text-stroke: 2px whitesmoke;
+  font-size: 2em;
+  color: black;
+}
+
+.full-heart {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  font-size: 1em;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.empty-heart:hover .full-heart {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.empty-heart:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0px white;
 }
 
 .img {
@@ -157,6 +212,13 @@ header {
   margin-left: 1em;
 }
 
+.text {
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .box-left {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -164,9 +226,10 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 100%;
   padding: 0.5em;
   padding-left: 1em;
+  width: 100%;
+  position: relative;
 }
 
 .box-right {
@@ -178,7 +241,12 @@ header {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  margin-left: -4em;
+  width: 0em;
+}
+
+.box:hover .box-left {
+  -webkit-animation: reduce-width 0.5s linear 1 forwards;
+          animation: reduce-width 0.5s linear 1 forwards;
 }
 
 .box:hover .fa-check-circle {
@@ -186,7 +254,7 @@ header {
           animation: animhover 0.5s linear 1 forwards;
 }
 
-.box:hover .price {
+.box:hover .box-right {
   -webkit-animation: slide 0.5s linear 1 forwards;
           animation: slide 0.5s linear 1 forwards;
 }
@@ -205,12 +273,10 @@ header {
   border-radius: 1em;
   margin: 1em 0;
   overflow: hidden;
-  opacity: 0;
   animation: slide-fade 1s linear 1 forwards reverse;
 }
 
 .price {
-  margin-left: 5em;
   margin-right: 1em;
   padding-bottom: 0.5em;
 }
@@ -238,16 +304,18 @@ header {
   font-size: 1.6em;
 }
 
-h3 {
-  margin: 0;
-  padding-bottom: 0.2em;
+.contenu {
+  width: 100%;
 }
 
-.contenu p, h3 {
+.contenu h3 {
+  height: 40px;
+  width: 100%;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  max-width: 250px;
+  margin: 0;
+  padding-bottom: 0.2em;
 }
 
 .entree1 {
@@ -381,5 +449,20 @@ h2 {
 p {
   margin: 0;
   font-family: 'Roboto-thin';
+}
+
+@media all and (min-width: 1000px) {
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 /*# sourceMappingURL=allmenu.css.map */
