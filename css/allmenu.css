@@ -451,7 +451,18 @@ p {
   font-family: 'Roboto-thin';
 }
 
+@media all and (min-width: 700px) {
+  .title-menu, .entree, .plat, .dessert {
+    margin-right: 20%;
+    margin-left: 20%;
+  }
+}
+
 @media all and (min-width: 1000px) {
+  .menu {
+    margin-right: 10%;
+    margin-left: 10%;
+  }
   footer {
     display: -webkit-box;
     display: -ms-flexbox;
