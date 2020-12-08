@@ -60,7 +60,7 @@
 
 @-webkit-keyframes slide {
   0% {
-    width: 0;
+    width: 0%;
   }
   100% {
     width: 120px;
@@ -69,7 +69,7 @@
 
 @keyframes slide {
   0% {
-    width: 0;
+    width: 0%;
   }
   100% {
     width: 120px;
@@ -152,11 +152,6 @@ header {
   padding-top: 1.5em;
 }
 
-.like {
-  position: absolute;
-  right: 2.5em;
-}
-
 .empty-heart {
   position: relative;
   z-index: 2;
@@ -217,6 +212,13 @@ header {
   margin-left: 1em;
 }
 
+.text {
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .box-left {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -242,19 +244,19 @@ header {
   width: 0em;
 }
 
+.box:hover .box-left {
+  -webkit-animation: reduce-width 0.5s linear 1 forwards;
+          animation: reduce-width 0.5s linear 1 forwards;
+}
+
 .box:hover .fa-check-circle {
-  -webkit-animation: rotate-circle 0.5s linear 1 forwards;
-          animation: rotate-circle 0.5s linear 1 forwards;
+  -webkit-animation: animhover 0.5s linear 1 forwards;
+          animation: animhover 0.5s linear 1 forwards;
 }
 
 .box:hover .box-right {
   -webkit-animation: slide 0.5s linear 1 forwards;
           animation: slide 0.5s linear 1 forwards;
-}
-
-.box:hover .box-left {
-  -webkit-animation: reduce-width 0.5 linear 1 forwards;
-          animation: reduce-width 0.5 linear 1 forwards;
 }
 
 .box {
@@ -302,11 +304,6 @@ header {
   font-size: 1.6em;
 }
 
-h3 {
-  margin: 0;
-  padding-bottom: 0.2em;
-}
-
 .contenu {
   width: 100%;
 }
@@ -317,6 +314,8 @@ h3 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  margin: 0;
+  padding-bottom: 0.2em;
 }
 
 .entree1 {

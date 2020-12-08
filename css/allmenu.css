@@ -60,7 +60,7 @@
 
 @-webkit-keyframes slide {
   0% {
-    width: 0;
+    width: 0%;
   }
   100% {
     width: 120px;
@@ -69,7 +69,7 @@
 
 @keyframes slide {
   0% {
-    width: 0;
+    width: 0%;
   }
   100% {
     width: 120px;
@@ -81,7 +81,7 @@
     width: 100%;
   }
   100% {
-    width: calc(100% - 120px);
+    width: calc(100% - 150px);
   }
 }
 
@@ -90,7 +90,7 @@
     width: 100%;
   }
   100% {
-    width: calc(100% - 120px);
+    width: calc(100% - 150px);
   }
 }
 
