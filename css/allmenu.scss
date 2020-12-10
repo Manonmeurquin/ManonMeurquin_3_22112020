@@ -125,7 +125,7 @@ header{
     background: linear-gradient(#FF79DA, #9356DC);
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: transparent; 
     opacity:0;
     font-size: 1em;
     transform: scale(0);
@@ -141,7 +141,7 @@ header{
     background: linear-gradient(#FF79DA, #9356DC);
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: transparent; 
     -webkit-text-stroke: 0px white;
   }
 
@@ -359,6 +359,11 @@ p{
     .title-menu, .entree, .plat, .dessert{
         margin-right: 20%;
         margin-left: 20%;
+    }
+
+    header{
+        display: flex;
+        justify-content: center;
     }
 
 }

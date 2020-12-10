@@ -456,6 +456,14 @@ p {
     margin-right: 20%;
     margin-left: 20%;
   }
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 @media all and (min-width: 1000px) {
