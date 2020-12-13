@@ -16,23 +16,23 @@
 
 @-webkit-keyframes slide-fade {
   0% {
-    opacity: 1;
-    margin-top: 0;
-  }
-  100% {
     opacity: 0;
     margin-top: 1em;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
   }
 }
 
 @keyframes slide-fade {
   0% {
-    opacity: 1;
-    margin-top: 0;
-  }
-  100% {
     opacity: 0;
     margin-top: 1em;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
   }
 }
 
@@ -81,7 +81,7 @@
     width: 100%;
   }
   100% {
-    width: calc(100% - 120px);
+    width: calc(100% - 150px);
   }
 }
 
@@ -90,7 +90,7 @@
     width: 100%;
   }
   100% {
-    width: calc(100% - 120px);
+    width: calc(100% - 150px);
   }
 }
 
@@ -169,7 +169,7 @@ header {
   background: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
   opacity: 0;
   font-size: 1em;
   -webkit-transform: scale(0);
@@ -189,7 +189,7 @@ header {
   background: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
   -webkit-text-stroke: 0px white;
 }
 
@@ -273,7 +273,8 @@ header {
   border-radius: 1em;
   margin: 1em 0;
   overflow: hidden;
-  animation: slide-fade 1s linear 1 forwards reverse;
+  -webkit-animation: slide-fade 1s linear 1 forwards;
+          animation: slide-fade 1s linear 1 forwards;
 }
 
 .price {
@@ -451,7 +452,26 @@ p {
   font-family: 'Roboto-thin';
 }
 
+@media all and (min-width: 700px) {
+  .title-menu, .entree, .plat, .dessert {
+    margin-right: 20%;
+    margin-left: 20%;
+  }
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 @media all and (min-width: 1000px) {
+  .menu {
+    margin-right: 10%;
+    margin-left: 10%;
+  }
   footer {
     display: -webkit-box;
     display: -ms-flexbox;

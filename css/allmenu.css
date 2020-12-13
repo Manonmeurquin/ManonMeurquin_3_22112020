@@ -16,23 +16,23 @@
 
 @-webkit-keyframes slide-fade {
   0% {
-    opacity: 1;
-    margin-top: 0;
-  }
-  100% {
     opacity: 0;
     margin-top: 1em;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
   }
 }
 
 @keyframes slide-fade {
   0% {
-    opacity: 1;
-    margin-top: 0;
-  }
-  100% {
     opacity: 0;
     margin-top: 1em;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
   }
 }
 
@@ -169,7 +169,7 @@ header {
   background: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
   opacity: 0;
   font-size: 1em;
   -webkit-transform: scale(0);
@@ -189,7 +189,7 @@ header {
   background: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
   -webkit-text-stroke: 0px white;
 }
 
@@ -263,6 +263,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  opacity: 0;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -273,7 +274,8 @@ header {
   border-radius: 1em;
   margin: 1em 0;
   overflow: hidden;
-  animation: slide-fade 1s linear 1 forwards reverse;
+  -webkit-animation: slide-fade 1s linear 1 forwards;
+          animation: slide-fade 1s linear 1 forwards;
 }
 
 .price {
@@ -331,6 +333,11 @@ header {
 .entree3 {
   -webkit-animation-delay: 0.8s;
           animation-delay: 0.8s;
+}
+
+.entree4 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .plat1 {
@@ -449,6 +456,10 @@ h2 {
 p {
   margin: 0;
   font-family: 'Roboto-thin';
+}
+
+a {
+  text-decoration: none;
 }
 
 @media all and (min-width: 700px) {

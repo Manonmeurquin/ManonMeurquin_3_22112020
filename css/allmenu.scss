@@ -22,13 +22,15 @@
 }
 
 @keyframes slide-fade{
+    
     0%{
-        opacity: 1;
-        margin-top: 0;
-    }
-    100%{
         opacity: 0;
         margin-top: 1em;
+    }
+
+    100%{
+        opacity: 1;
+        margin-top: 0;
     }
 }
 
@@ -201,6 +203,7 @@ header{
 
 .box{
     display: flex;
+    opacity: 0;
     justify-content: space-between;
     width: 100%;
     background-color: white;
@@ -208,7 +211,7 @@ header{
     border-radius: 1em;
     margin: 1em 0;
     overflow: hidden;
-    animation: slide-fade 1s linear 1 forwards reverse;
+    animation: slide-fade 1s linear 1 forwards;
 }
 
 .price{
@@ -253,6 +256,9 @@ header{
 }
 .entree3{
     animation-delay: 0.8s;
+}
+.entree4{
+    animation-delay: 1s;
 }
 .plat1{
     animation-delay: 1s;
@@ -352,6 +358,9 @@ h2{
 p{
     margin: 0;
     font-family: 'Roboto-thin';
+}
+a{
+    text-decoration: none;
 }
 
 @media all and (min-width: 700px){
